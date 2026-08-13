@@ -1,0 +1,26 @@
+.testimonial-slider {
+    & > .c-reviews {
+        padding: 4vw 0 4vw;
+        @media screen and (max-width: $phone) {
+            .slick-prev {
+                left: -5px;
+            }
+            .slick-next {
+                right: -5px;
+            }
+        }
+    }
+    h2 {
+        @media screen and (max-width: $tab-port) {
+            text-align: center;
+            &:after {
+                margin: 20px auto;
+            }
+        }
+    }   
+    .c-reviews__block {
+        @media screen and (max-width: $phone) {
+            padding: 20px 30px;
+        }
+    }
+}

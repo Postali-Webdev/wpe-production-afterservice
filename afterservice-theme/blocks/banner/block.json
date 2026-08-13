@@ -1,0 +1,15 @@
+{
+  "name": "acf/banner",
+  "title": "Banner Block",
+  "description": "Banner slider",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["banner"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "banner.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

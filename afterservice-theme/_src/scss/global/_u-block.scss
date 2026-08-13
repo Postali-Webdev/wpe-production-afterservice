@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    #BLOCK UTILITES
+\*------------------------------------*/
+
+/**
+* Generate u-block--clearfix class to clear child elements floats
+*/
+.u-block--clearfix {
+	@include clearfix();
+}
+
+/**
+* Generate u-block--centerclass to center elements on the page
+*/
+.u-block--center {
+	@include center-block();
+}
+
+/**
+* Generate u-block--fixed class to fix elements on the page
+*/
+.u-block--fixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+/**
+* Generate u-block--sticky class to fix elements on the page
+*/
+.u-block--sticky {
+	position: sticky;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+/**
+* Generate u-block--fixed-top class to position fix elements on the page
+*/
+.u-block--fixed-top {
+	top: 0;
+}
+
+/**
+* Generate padding classes to space out elements
+*/
+@each $spacing, $value in $spacings {
+
+	.u-block-padding--#{$spacing} {
+		padding-top: halve($value);
+		padding-bottom: halve($value);
+	}
+
+	@include media-breakpoint-up(sm) {
+		.u-block-padding--#{$spacing} {
+			padding-top: $value;
+			padding-bottom: $value;
+		}
+	}
+
+}
+
+/**
+* Generate margin classes to space out elements
+*/
+@each $spacing, $value in $spacings {
+
+	.u-block-margin--#{$spacing} {
+		margin-top: halve($value);
+		margin-bottom: halve($value);
+	}
+
+	@include media-breakpoint-up(sm) {
+		.u-block-margin--#{$spacing} {
+			margin-top: $value;
+			margin-bottom: $value;
+		}
+	}
+
+}
+
+/**
+* Generate background color classes for each color in $colors
+*/
+@each $bgcolor, $value in $colors {
+
+	.u-block--#{$bgcolor} {
+		background-color: $value;
+	}
+
+}
+
+/**
+* Generate hr color classes for each color in $colors
+*/
+@each $bgcolor, $value in $colors {
+
+	.u-block-hr--#{$bgcolor} {
+		border-color: $value;
+	}
+
+}
+
+.u-block-hr--narrow {
+    max-width: 200px;
+}
+
+.u-block-hr--narrow-left {
+    max-width: 200px;
+    margin-left: 0;
+}
+
+/**
+* Generate float classes for each color in $floats
+*/
+@each $float, $value in $floats {
+
+	.u-block--fl-#{$float} {
+		float: $value;
+	}
+
+}
+
+// Responsive Pulls
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		.u-block-#{$breakpoint}--fl-left {
+			float: left;
+		}
+
+		.u-block-#{$breakpoint}--fl-right {
+			float: right;
+		}
+
+		.u-block-#{$breakpoint}--fl-none {
+			float: none;
+		}
+	}
+}
+
+// Block relative
+.u-block--relative {
+	position: relative;
+}

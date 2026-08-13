@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    #CAROUSEL
+\*------------------------------------*/
+
+.c-carousel__caption {
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.c-carousel__item {
+    position: relative;
+}
+
+/* Pagination */

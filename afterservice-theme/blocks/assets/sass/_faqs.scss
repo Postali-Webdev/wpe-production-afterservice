@@ -1,0 +1,14 @@
+.faqs-block {
+    h2 {
+        color: $navy;
+        @media screen and (max-width: $tab-port) {
+            margin-bottom: 0;
+        }
+    }
+    .c-cta-tertiary {
+        background: $white !important;
+        &:before {
+            background: $white !important;
+        }
+    }
+}

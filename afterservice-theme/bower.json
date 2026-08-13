@@ -1,0 +1,19 @@
+{
+  "name": "Jerry Barroso",
+  "version": "1.0.0",
+  "authors": [
+    "Jerry Barroso <gerardo.barroso@plasticsurgerystudios.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "devDependencies": {
+    "matchHeight": "matchheight#~0.7.0",
+    "owl.carousel": "~2.1.3",
+    "ScrollToFixed": "~1.0.6",
+    "bLazy": "blazy#^1.6.2"
+  }
+}

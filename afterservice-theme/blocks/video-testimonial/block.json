@@ -1,0 +1,15 @@
+{
+  "name": "acf/video-testimonial",
+  "title": "Video Testimonial Block",
+  "description": "Video Testimonial",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["video", "testimonial"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "video-testimonial.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

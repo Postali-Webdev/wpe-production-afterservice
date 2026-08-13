@@ -1,0 +1,149 @@
+/*------------------------------------*\
+    #SIDEBAR
+\*------------------------------------*/
+
+.c-sidebar-blog {
+	background: color('accent-5') url('../img/int-blog-stamp.png') bottom right no-repeat;
+	flex-grow: 1;
+	padding: 4vw;
+}
+
+.c-sidebar {
+	flex-grow: 1;
+	padding: 0 4vw;
+}
+
+
+.c-sidebar__form {
+	background: color('accent-1') url('../img/img-flag.svg') no-repeat center/cover;
+	padding: $spacing-unit;
+	border-top: 10px solid color('accent-2');
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+
+	& label {
+        color: color('white');
+        text-transform: uppercase;
+    }
+}
+
+
+.c-sidebar__nav {
+	@include media-breakpoint-up(sm) {
+		padding-top: double($spacing-unit);
+	}
+}
+
+.c-sidebar__list {
+
+	& > li {
+
+		&:not(:last-child) {
+			margin-bottom: halve($spacing-unit);
+		}
+
+
+		>  a {
+			padding: $spacing-unit;
+			background-color: color('accent-5');
+			display: block;
+			text-decoration: none;
+			transition: all .5s ease;
+			font-family: $font-family-secondary;
+			text-transform: uppercase;
+			font-size: rem(32px);
+			border-bottom: 3px solid color('accent-10');
+
+			@include link-states() {
+				color: color('accent-1');
+				border-color: color('accent-1');
+			}
+		}
+	}
+
+	& .sub-menu {
+		display: none;
+		padding: $spacing-unit;
+		list-style: none;
+
+		& > li >  a { 
+			color: color('black');
+			display: block;
+			text-decoration: none;
+			padding: quarter($spacing-unit) 0;
+
+			@include link-states() {
+				color: color('accent-9');
+			}
+		}
+	}
+
+	& li.current_page_item > a {
+		color: color('accent-1');
+	}
+
+	& li.current-menu-ancestor .sub-menu, 
+	& li.current-menu-parent .sub-menu {
+    	display: block;
+	}
+
+}
+
+	.c-sidebar__reviews-img {
+		max-width: 30%;
+		margin: 0 auto;
+		display: block;
+	}
+
+.c-sidebar__reviews {
+	padding: $spacing-unit;
+	margin-top: double($spacing-unit);
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+}
+
+.c-carousel__reviews-sidebar__author {
+	font-style: normal;
+	font-family: $font-family-secondary-bold;
+	text-transform: uppercase;
+	font-size: rem(34px);
+	margin-bottom: $spacing-unit;
+	display: block;
+
+	&::before {
+		content: '';
+	}
+}
+
+.c-sidebar__cta {
+	background-color: color('accent-1');
+	padding: $spacing-unit;
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+}
+
+.c-sidebar__info {
+	background-color: color('accent-2');
+	color: color('white');
+	padding: $spacing-unit;
+	margin-top: double($spacing-unit);
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+}
+
+.c-sidebar__featured {
+
+	& img {
+		width: 100%;
+		height: 450px;
+		object-fit: cover;
+	}
+}

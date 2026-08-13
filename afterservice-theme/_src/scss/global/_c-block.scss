@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #BLOCK
+\*------------------------------------*/
+
+.c-block--flex {
+	@include flexbox-block();
+}
+
+.c-block--flex-desktop {
+	@include media-breakpoint-up(lg) {
+		@include flexbox-block();
+	}
+}
+
+.c-block--flex-tablet {
+	@include media-breakpoint-up(md) {
+		@include flexbox-block();
+	}
+}
+
+.c-block--flex-mobile {
+	@include media-breakpoint-up(sm) {
+		@include flexbox-block();
+	}
+}
+
+.c-block--flex-v-center {
+	align-items: center;
+}
+
+.c-block--flex-h-center {
+	justify-content: center;
+}
+
+.c-block--flex-start {
+	justify-content: flex-start;
+}
+
+.c-block--flex-end {
+	justify-content: flex-end;
+}
+
+.c-block--flex-between {
+	justify-content: space-between;
+}
+
+.c-block--flex-around {
+	justify-content: space-around;
+}
+
+.c-block--flex-nowrap {
+	flex-wrap: nowrap;
+}
+
+.c-block--flex-basis {
+	flex-basis: 50%;
+}
+
+.c-block--flex-grow {
+	flex-grow: 1;
+}
+
+.c-block--flex-self-end {
+	align-self: flex-end;
+}
+
+/* Height */
+
+.u-block--height {
+	height: 450px;
+
+	@include media-breakpoint-up(md) {
+		height: 550px;
+	}
+}

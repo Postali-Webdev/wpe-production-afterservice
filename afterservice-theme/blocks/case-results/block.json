@@ -1,0 +1,15 @@
+{
+  "name": "acf/case-results",
+  "title": "Case Results Block",
+  "description": "Case Results",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["case results"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "case-results.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

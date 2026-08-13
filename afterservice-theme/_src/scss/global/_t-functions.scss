@@ -1,0 +1,263 @@
+/*------------------------------------*\
+    #FUNCTIONS
+\*------------------------------------*/
+
+
+///
+/// Return EM value
+///
+/// @param {pixel} $px - Target equivalent pixel value to output as ems.
+/// @param {pixel} $base [$base-font-size] - Base pixel value to calculate against.
+///
+/// @require {variable} $base-font-size
+///
+@function em($px, $base: $base-font-size) {
+	@return ($px / $base) * 1em;
+}
+
+@function rem($value) {
+    $rem: ($value / $base-font-size) + rem; 
+    @return $rem;
+}
+
+
+///
+/// Returns the number as a negative.
+///
+/// @param {number} $number
+///
+@function negative($number) {
+	@return -($number);
+}
+
+/// @alias negative
+@function neg($args...) {
+	@return negative($args...);
+}
+
+
+///
+/// Returns number as rounded half the number passed.
+///
+/// @param {number} $number
+///
+@function halve($number) {
+	@return round($number / 2);
+}
+
+/// @alias halve
+@function half($args...) {
+	@return halve($args...);
+}
+
+
+///
+/// Returns number as rounded third the number passed.
+///
+/// @param {number} $number
+///
+@function third($number) {
+	@return round($number / 3);
+}
+
+
+///
+/// Returns number as rounded quarter the number passed.
+///
+/// @param {number} $number
+///
+@function quarter($number) {
+	@return round($number / 4);
+}
+
+/// @alias quarter
+@function fourth($args...) {
+	@return quarter($args...);
+}
+
+
+///
+/// Returns number as rounded double the number passed.
+///
+/// @param {number} $number
+///
+@function double($number) {
+	@return round($number * 2);
+}
+
+
+///
+/// Returns number as rounded quadruple the number passed.
+///
+/// @param {number} $number
+///
+@function triple($number) {
+	@return round($number * 3);
+}
+
+
+///
+/// Returns number as rounded quadruple the number passed.
+///
+/// @param {number} $number
+///
+@function quadruple($number) {
+	@return round($number * 4);
+}
+
+
+
+///
+/// Retrieve color from sass map $colors
+///
+/// @param {string} $color - Name of color to return from $colors.
+///
+/// @require {variable} $colors
+///
+/// @ignore
+/// [1] Check if $color exists in $colors.
+/// [2] If not pass an error.
+///
+@function color($color) {
+
+	// [1]
+	@if map-has-key($colors, $color) {
+
+		@return map-get($colors, $color);
+
+	} @else {
+
+	@warn \'#{$color}' is not an available version of #{$colors}. (#{map-keys($colors)})\''; // [2]
+
+		@return null;
+
+	}
+
+}
+
+///
+/// Retrieve color from sass map $buttons
+///
+/// @param {string} $button - Name of color to return from $buttons.
+///
+/// @require {variable} $buttons
+///
+/// @ignore
+/// [1] Check if $button exists in $buttons.
+/// [2] If not pass an error.
+///
+@function button($button) {
+
+	// [1]
+	@if map-has-key($buttons, $button) {
+
+		@return map-get($buttons, $button);
+
+	} @else {
+
+	@warn \'#{$button}' is not an available version of #{$buttons}. (#{map-keys($buttons)})\''; // [2]
+
+		@return null;
+
+	}
+
+}
+
+
+///
+/// Retrieve font weight from sass map $colors
+///
+/// @param {string} $font-weight - Name of font weight to return from $colors.
+///
+/// @require {variable} $colors
+///
+/// @ignore
+/// [1] Check if $font-weight exists in $font-weights.
+/// [2] If not pass an error.
+///
+@function font-weight($font-weight) {
+
+	// [1]
+	@if map-has-key($font-weights, $font-weight) {
+
+		@return map-get($font-weights, $font-weight);
+
+	} @else {
+
+	@warn \'#{$font-weight}' is not an available version of #{$font-weights}. (#{map-keys($font-weights)})\''; // [2]
+
+		@return null;
+
+	}
+
+}
+
+
+///
+/// Retrieve z-index value from sass map $z-index
+///
+/// @param {string} $element - Element to return z-index value from $z-index.
+///
+/// @require {variable} $z-index
+///
+/// @ignore
+/// [1] Check if $element exists in $z-index.
+/// [2] If not pass an error.
+///
+@function z($element) {
+
+	// [1]
+	@if map-has-key($z-index, $element) {
+
+		@return map-get($z-index, $element);
+
+	} @else {
+
+	@warn \'#{$element}' does not have a value set in  #{$z-index}. (#{map-keys($z-index)})\''; // [2]
+
+		@return null;
+
+	}
+
+}
+
+// Breakpoint viewport sizes and media queries.
+//
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 544px, md: 768px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 544px, md: 768px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+	$n: index($breakpoint-names, $name);
+	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 544px, md: 768px))
+//    544px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.1.
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 544px, md: 768px))
+//    767px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$next: breakpoint-next($name, $breakpoints);
+	@return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "acf/cta",
+  "title": "CTA Block",
+  "description": "CTA",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["cta"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "cta.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

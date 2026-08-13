@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #BREADCRUMBS
+\*------------------------------------*/
+
+.c-breadcrumb {
+	@include list-unstyled;
+
+	> li {
+		display: inline-block;
+
+		& + li::before {
+			padding: 0 10px;
+			color: #ccc;
+			content: '/\00a0';
+		}
+	}
+}

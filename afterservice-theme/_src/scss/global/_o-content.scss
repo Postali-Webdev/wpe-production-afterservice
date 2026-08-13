@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    #CONTENT
+\*------------------------------------*/
+
+.o-content {
+	padding: 4vw;
+
+	@include media-breakpoint-up(md) {
+        padding: 0 5vw;
+	}
+}
+
+.o-container--wide {
+	max-width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.o-content--hidden {
+	overflow: hidden;
+}
+
+.c-content {
+	padding: 6vw 0 4vw;
+}
+
+.c-content-bio {
+	background: url('../img/img-woodgrain.png') top right no-repeat;
+}
+
+.o-content {
+
+	& h2 {
+		color: color('accent-3');
+	}
+
+	& h3 {
+		margin-bottom: halve($spacing-unit);
+		font-family: $font-family-primary-bold;
+		text-transform: none;
+		font-size: rem(26px);
+		letter-spacing: 0;
+	}
+}

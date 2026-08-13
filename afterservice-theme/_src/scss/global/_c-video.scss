@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #VIDEO
+\*------------------------------------*/
+
+.c-video {
+    margin: double($spacing-unit) 0;
+}
+
+.c-video__block {
+    position: relative;
+}
+
+.c-video__link {
+    display: block;
+}
+
+.c-video__image {
+    width: 100%;
+}
+
+.c-video__icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: $spacing-unit double($spacing-unit);
+    background-color: color('accent-3');
+    color: color('white');
+    font-size: rem(34px);
+}
+
+.c-video--line {
+    background: url('../img/img-lines.png') no-repeat center/contain;
+    width: 250px;
+    height: 302px;
+    display: block;
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    z-index: 10;
+}
+

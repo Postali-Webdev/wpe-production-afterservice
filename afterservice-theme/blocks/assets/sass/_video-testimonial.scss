@@ -1,0 +1,33 @@
+.video-testimonial-block {
+    .touts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin: 0 auto;
+        border: solid 1px $white;
+        @media screen and (max-width: $tab-port) {
+            grid-template-columns: 1fr;
+        }
+        .tout-block {
+            text-align: center;
+            border-right: solid 1px $white;
+            color: $white;
+            padding: 35px;
+            box-sizing: border-box;
+            @media screen and (max-width: $tab-port) {
+                border-right: 0;
+                border-bottom: solid 1px $white;
+            }
+            p {
+                margin: 0;
+                @include heavy-eyebrow;
+            }
+            &:last-of-type {
+                border-right: 0;
+                @media screen and (max-width: $tab-port) {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

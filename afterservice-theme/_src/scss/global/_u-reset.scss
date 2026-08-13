@@ -1,0 +1,100 @@
+/*------------------------------------*\
+	#RESET
+\*------------------------------------*/
+
+/**
+* reset grid colums margin/padding
+*/
+
+.u-reset--gutter {
+	margin: 0;
+}
+
+.u-reset--gutter > [class*='col-'] {
+	padding: 0;
+}
+
+/**
+* Generate reset margin classes for each key in $resets
+*/
+@each $key in $resets {
+	@if ($key) == 'all' {
+		.u-reset--margin {
+			margin: 0;
+		}
+	} @else {
+		.u-reset--margin-#{$key} {
+			margin-#{$key}: 0;
+		}
+	}
+}
+
+/**
+* Generate reset padding classes for each key in $resets
+*/
+@each $key in $resets {
+	@if ($key) == 'all' {
+		.u-reset--padding {
+			padding: 0;
+		}
+	} @else {
+		.u-reset--padding-#{$key} {
+			padding-#{$key}: 0;
+		}
+	}
+}
+
+/**
+* reset links default styles in _b-type.scss
+*/
+.u-reset--link {
+	text-decoration: none;
+
+	@include link-states() {
+		color: color('accent-1');
+		text-decoration: none;
+	}
+}
+
+/**
+* reset blockquote default styles in _b-type.scss
+*/
+.u-reset--blockquote {
+	padding: 0;
+	border-left: 0;
+}
+
+/**
+* reset font default styles in _b-type.scss
+*/
+.u-reset-font--primary {
+	font-family: $font-family-primary;
+}
+
+.u-reset-font--primary-italic {
+	font-family: $font-family-primary-italic;
+}
+
+.u-reset-font--primary-italic-bold {
+	font-family: $font-family-primary-bold-italic;
+}
+
+.u-reset-font--primary-bold {
+	font-family: $font-family-primary-bold;
+}
+
+.u-reset-font--secondary {
+	font-family: $font-family-secondary;
+}
+
+.u-reset-font--secondary-bold {
+	font-family: $font-family-secondary-bold;
+}
+
+
+.u-reset-text--line {
+	&::before,
+	&::after {
+		background-color: color('white');
+	}
+}

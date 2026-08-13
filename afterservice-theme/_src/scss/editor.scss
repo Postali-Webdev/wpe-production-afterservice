@@ -1,0 +1,15 @@
+@import url(global.css);
+@import url(../../style.css);
+
+/* ====================
+	Editor Styles for WYSIWYG
+==================== */
+body,
+body.wp-autoresize {
+	padding: 25px !important;
+	background: none !important;
+	width: auto !important;
+	height: auto !important;
+	max-width: 870px !important;
+	margin: 0 !important;
+}

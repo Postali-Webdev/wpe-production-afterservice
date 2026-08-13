@@ -1,0 +1,236 @@
+/*------------------------------------*\
+	#NAVIGATION
+\*------------------------------------*/
+
+
+/**
+* Navigation List Scroll Highlight
+*/
+.c-nav__hightlight {
+	box-shadow: 0 0 10px transparentize(color('black'), 0.5);
+}
+
+.c-nav {
+	border-bottom: 1px solid color('accent-8');
+	flex-grow: 1;
+}
+
+
+/**
+* <ul> Navigation List
+*/
+.c-nav__list {
+	@include list-unstyled;
+	margin: 0;
+
+	@include media-breakpoint-up(sm) {
+		@include flexbox-block();
+		width: 100%;
+	}
+}
+
+/**
+* <li> Navigation List item
+*/
+.c-nav__item {
+	position: relative;
+
+	@include media-breakpoint-up(sm) {
+		flex-grow: 1;
+		text-align: center;
+
+		&:hover > .c-nav__dropdown {
+			display: block;
+		}
+	}
+
+	&.c-nav__item--active > .c-nav__link {
+		color: color('accent-1');
+	}
+}
+
+/**
+* <a> Navigation List link
+*/
+.c-nav__link {
+	display: block;
+	padding: halve($spacing-unit) $spacing-unit;
+	color: color('accent-3');
+	font-size: rem(21px);
+	font-family: $font-family-secondary;
+	text-transform: uppercase;
+	font-weight: font-weight('regular');
+	text-decoration: none;
+
+	@include media-breakpoint-up(sm) {
+		border-right: 1px solid color('accent-8');
+		padding: double($spacing-unit) - 5 halve($spacing-unit);
+		border-bottom: 5px solid transparent;
+		font-size: rem(28px);
+	}
+
+	@include media-breakpoint-down(xs) {
+		border-bottom: 1px solid color('accent-8');
+	}
+
+	@include link-states() {
+		background-color: color('accent-5');
+		color: color('accent-3');
+		border-bottom-color: color('accent-3');
+	}
+}
+
+.appt_link {
+	background-color: color('accent-1');
+	
+	& a {
+		color: color('white');
+		text-align: center;
+
+		@include link-states() {
+			background-color: color('accent-2');
+			color: color('white');
+		}
+	}
+
+	&.c-nav__item--active {
+		& a {
+			background-color: color('accent-2');
+			color: color('white') !important;
+		}
+	}
+}
+
+/**
+* Sub Navigation List
+*/
+.c-nav__dropdown {
+	@include list-unstyled;
+	display: none;
+	padding-left: $spacing-unit;
+
+	& .c-nav__dropdown {
+		padding-left: $spacing-unit;
+	}
+
+	.c-nav__link {
+		padding: halve($spacing-unit) $spacing-unit;
+		border-right: 0;
+		border-bottom: 0;
+
+		@include link-states() {
+			background-color: color('white');
+		}
+	}
+
+	& .c-nav__dropdown--toggle {
+		display: none;
+	}
+
+	@include media-breakpoint-up(sm) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: color('white');
+		width: 320px;
+		text-align: left;
+		z-index: 9999;
+		padding-left: 0;
+		padding-top: double($spacing-unit);
+		padding-bottom: double($spacing-unit);
+		border: 1px solid color('accent-8');
+
+		& .c-nav__dropdown {
+			padding-left: 0;
+		}
+
+		.c-nav__item {
+			display: block;
+
+			&.c-nav__item--active > .c-nav__link {
+				color: color('accent-1');
+			}
+		}
+
+		.c-nav__link {
+			color: color('black');
+			padding: halve($spacing-unit) $spacing-unit;
+
+			@include link-states() {
+				color: color('accent-1');
+				text-decoration: none;
+			}
+		}
+
+		.c-nav__item--children > .c-nav__link::after {
+			content: '';
+			background-image: url('../img/img-arrow-down.png');
+			float: right;
+			background-size: 9px 6px;
+			width: 9px;
+			height: 6px;
+			display: inline-block;
+			transform: translate(3px, 5px);
+		}
+
+		/**
+		* Sub Navigation Levels
+		*/
+		& .c-nav__dropdown {
+			top: 0;
+			left: 100%;
+		}
+	}
+}
+
+.c-nav__item--children > .c-nav__link::after {
+	content: '';
+	background: transparent url('../img/img-arrow-down.png') no-repeat center;
+	cursor: pointer;
+	background-size: 9px 6px;
+	width: 9px;
+	height: 6px;
+	display: block;
+    vertical-align: middle;
+    margin: auto;
+    position: absolute;
+    right: $spacing-unit;
+    top: $spacing-unit;
+
+	@include media-breakpoint-up(sm) {
+		left: 50%;
+		margin-left: neg(8px);
+		right: auto;
+		top: auto;
+	}
+}
+
+/**
+* Mobile Navigation Icons
+*/
+.c-nav__icon {
+	line-height: 0;
+	display: block;
+	border: 0;
+	background-color: color('accent-5');
+	padding: $spacing-unit;
+
+	@include media-breakpoint-up(sm) {
+		display: none;
+	}
+}
+
+.c-nav__icon--padding {
+	padding: $spacing-unit;
+}
+
+.c-nav__icon--open {
+	color: color('accent-3');
+	font-size: rem(28px);
+}
+
+.c-nav__icon--close {
+	color: color('accent-3');
+	font-size: rem(28px);
+}
+

@@ -1,0 +1,15 @@
+{
+  "name": "acf/testimonial-slider",
+  "title": "Testimonial Slider Block",
+  "description": "Testimonial Slider",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["testimonials"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonial-slider.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

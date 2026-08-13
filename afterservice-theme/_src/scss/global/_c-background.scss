@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    #BACKGROUNDS
+\*------------------------------------*/
+
+/**
+ * Configuration for backgrounds images
+ *
+ * List $bgs: [name]
+*/
+
+$bgs: name;
+
+@each $bg in $bgs {
+	.c-background--#{$bg} {
+		background-image: url('../img/img-#{$bg}.jpg');
+	}
+}
+
+/**
+* Background Properties
+*/
+.c-background {
+	position: relative;
+	background-repeat: no-repeat;
+}
+
+.c-background--relative {
+	position: relative;
+	z-index: 10;
+}
+
+.c-background--fixed {
+	@include media-breakpoint-up(md) {
+		background-attachment: fixed;
+	}
+}
+
+
+/**
+* Background Mobile Reset
+*/
+.is-device .c-background--fixed {
+	background-attachment: initial;
+}
+
+
+/**
+* Background Position
+*/
+.c-background--position-top {
+	background-position: top center;
+}
+
+.c-background--position-bottom {
+	background-position: bottom center;
+}
+
+.c-background--position-center {
+	background-position: center;
+}
+
+.c-background--position-right {
+	background-position: center right;
+}
+
+.c-background--position-left {
+	background-position: center left;
+}
+
+
+/**
+* Background Size
+*/
+.c-background--cover {
+	background-size: cover;
+}
+
+.c-background--contain {
+	background-size: contain;
+}
+
+/**
+* Background Base
+*/
+.c-background--base {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -10;
+}
+
+.c-background--gradient-1 {
+	background-color: rgba(color('accent-1'), 1);
+	background: linear-gradient(-80deg, rgba(color('accent-2'), 1) 10%, rgba(color('accent-1'), 1) 50%);
+}
+
+.c-background--gradient-2 {
+	background-color: rgba(color('accent-2'), 1);
+	background: linear-gradient(180deg, rgba(color('accent-2'), 1) 40%, rgba(color('white'), 1) 70%);
+}
+

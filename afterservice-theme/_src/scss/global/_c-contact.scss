@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    #CONTACT
+\*------------------------------------*/
+
+.c-contact__form {
+    @include media-breakpoint-down(sm) {
+        margin-top: $spacing-unit;
+    }
+}
+
+.c-contact__cta {
+    background-color: color('accent-2');
+    padding: quadruple($spacing-unit) double($spacing-unit);
+    margin: $spacing-unit 0;
+    text-align: center;
+}
+
+.c-contact__cta-title {
+    font-family: $font-family-primary-bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.c-contact__btn {
+    font-family: $font-family-primary-italic;
+    text-transform: none;
+    background-color: color('white');
+    color: color('accent-2');
+    padding: $spacing-unit + 5 quadruple($spacing-unit);
+}
+
+.c-contact__title {
+    text-transform: none;
+    font-size: rem(85px);
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(125px);
+    }
+
+    & span {
+        text-transform: uppercase;
+        font-size: rem(22px);
+        display: block;
+        margin-top: $spacing-unit;
+
+        @include media-breakpoint-up(md) {
+            margin-top: neg(10px);
+            font-size: rem(30px);
+            padding-left: 340px;
+        }
+    }
+}

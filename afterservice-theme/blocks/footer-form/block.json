@@ -1,0 +1,15 @@
+{
+  "name": "acf/footer-form",
+  "title": "Footer Form Block",
+  "description": "Footer Form",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["footer", "form"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "footer-form.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

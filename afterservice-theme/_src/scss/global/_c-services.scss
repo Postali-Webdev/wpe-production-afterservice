@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    #SERVICES
+\*------------------------------------*/
+
+.c-services {
+    position: relative;
+    overflow: hidden;
+}
+
+.c-services__img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    transition: all .5s ease;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+}
+
+.c-services__content {
+    padding-bottom: $spacing-unit;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: double($spacing-unit);
+    }
+}
+
+.c-services__title {
+    text-transform: uppercase;
+    font-weight: font-weight('bold');
+
+    @include media-breakpoint-down(sm) {
+        font-size: rem(24px);
+    }
+}
+
+.c-services__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+
+    @include media-breakpoint-up(xs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.c-services__link {
+    position: relative;
+    width: 100%;
+    background-color: color('black');
+    @include flexbox-block();
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 1;
+
+    @include media-breakpoint-up(xs) {
+        height: 50vh;
+        min-height: 600px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 10;
+    }
+
+    @include link-states() {
+        text-decoration: none;
+
+        .c-services__img {
+            transform: scale(1.1);
+        }
+
+        .c-services__block {
+            transform: translateY(0);
+        }
+
+        .c-services__description {
+            opacity: 1;
+        }
+    }
+}
+
+.c-services__block {
+    position: relative;
+    z-index: 10;
+    padding: $spacing-unit double($spacing-unit);
+    z-index: 10;
+    transform: translateY(60%);
+    transition: all .5s ease;
+}
+
+.c-services__description {
+    opacity: 0;
+    transition: all .5s ease;
+}
+

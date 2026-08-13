@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+
+.c-pagination {
+	@include list-unstyled;
+
+	> li {
+		display: inline-block;
+
+		> a,
+		> span {
+			padding: halve($spacing-unit);
+			color: color('black');
+			border: 1px solid #ddd;
+
+			@include link-states() {
+				text-decoration: none;
+			}
+		}
+	}
+}

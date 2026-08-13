@@ -1,0 +1,244 @@
+/*------------------------------------*\
+	#TYPOGRAPY
+\*------------------------------------*/
+
+@font-face {
+    font-family: "Crimson Text Regular";
+    src: url('../fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Crimson Text Italic";
+    src: url('../fonts/CrimsonText-Italic.ttf');
+}
+
+@font-face {
+    font-family: "Crimson Text SemiBold";
+    src: url('../fonts/CrimsonText-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "Crimson Text SemiBold Italic";
+    src: url('../fonts/CrimsonText-SemiboldItalic.ttf');
+}
+
+@font-face {
+    font-family: "Crimson Text Bold";
+    src: url('../fonts/CrimsonText-Bold.ttf');
+    font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: "Crimson Text Bold Italic";
+    src: url('../fonts/CrimsonText-BoldItalic.ttf');
+    font-weight: bold;
+	font-style: italic;
+}
+
+
+@font-face{
+    font-family: "Refrigerator Deluxe Light";
+    src:url("../fonts/refrigerator/89be766b-7c35-4017-b9b4-e5cafd36390e.eot?#iefix");
+    src:url("../fonts/refrigerator/89be766b-7c35-4017-b9b4-e5cafd36390e.eot?#iefix") format("eot"),url("../fonts/refrigerator/62b5d228-4c32-440d-b039-510acbc971d5.woff2") format("woff2"),url("../fonts/refrigerator/a687c8ea-f73e-48df-a1dc-483578b42c98.woff") format("woff"),url("../fonts/refrigerator/18d62973-809d-4cc7-a2fc-a1c68ee98b25.ttf") format("truetype"),url("../fonts/refrigerator/a7513432-ca8e-40e3-ac92-789eb6e79053.svg#a7513432-ca8e-40e3-ac92-789eb6e79053") format("svg");
+   	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face{
+    font-family: "Refrigerator Deluxe Regular";
+    src:url("../fonts/refrigerator/7e9cd18f-2b37-4fb4-8f7e-877af6a8e12d.eot?#iefix");
+    src:url("../fonts/refrigerator/7e9cd18f-2b37-4fb4-8f7e-877af6a8e12d.eot?#iefix") format("eot"),url("../fonts/refrigerator/e3a66ff0-6d54-4f62-8124-996416bd9ba0.woff2") format("woff2"),url("../fonts/refrigerator/f683c1a3-e77b-456c-bcc5-3c5be88ad71d.woff") format("woff"),url("../fonts/refrigerator/3bbb9d57-b299-48cf-be44-604f2d7deba7.ttf") format("truetype"),url("../fonts/refrigerator/1cf6bbb7-8ef4-44b4-9051-324361f4e4a4.svg#1cf6bbb7-8ef4-44b4-9051-324361f4e4a4") format("svg");
+    font-weight: 100;
+	font-style: normal;
+}
+
+@font-face{
+    font-family: "Refrigerator Deluxe Bold";
+    src:url("../fonts/refrigerator/708dd693-eeda-487d-9039-2eac4b32db20.eot?#iefix");
+    src:url("../fonts/refrigerator/708dd693-eeda-487d-9039-2eac4b32db20.eot?#iefix") format("eot"),url("../fonts/refrigerator/9584a601-4326-49ab-b767-7a1428bb9e92.woff2") format("woff2"),url("../fonts/refrigerator/d4abefb7-9044-432c-b70b-9871bfd0530f.woff") format("woff"),url("../fonts/refrigerator/2ee6b0e4-3ebe-41a0-bc18-b0feb654b99e.ttf") format("truetype"),url("../fonts/refrigerator/32db4766-fac4-4bbe-a9ff-835589f90655.svg#32db4766-fac4-4bbe-a9ff-835589f90655") format("svg");
+    font-weight: bold;
+	font-style: normal;
+}
+
+@font-face{
+    font-family: "Refrigerator Deluxe Heavy";
+    src:url("../fonts/refrigerator/a7fd052c-bd32-46a7-a66b-960b778bd40f.eot?#iefix");
+    src:url("../fonts/refrigerator/a7fd052c-bd32-46a7-a66b-960b778bd40f.eot?#iefix") format("eot"),url("../fonts/refrigerator/efa794b8-fad3-4192-b81d-371d9644cc89.woff2") format("woff2"),url("../fonts/refrigerator/8ee197c9-1e2e-437e-9df1-238393366735.woff") format("woff"),url("../fonts/refrigerator/49f48500-2374-44f3-b5ab-c70e5d164a5e.ttf") format("truetype"),url("../fonts/refrigerator/506f8c49-ae33-44cd-908c-6072d026c2d4.svg#506f8c49-ae33-44cd-908c-6072d026c2d4") format("svg");
+    font-weight: bolder;
+	font-style: normal;
+}
+
+
+/**
+* Headings
+*/
+
+@include headings() {
+	margin-top: $spacing-unit;
+	margin-bottom: double($spacing-unit);
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+h1, .u-h1, h2, .u-h2, h3, .u-h3, h4, .u-h4, h5, .u-h5, h6, .u-h6 {
+	font-family: $font-family-secondary-bold;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+h1, .u-h1 {
+	font-size: rem(48px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(62px);
+	}
+}
+
+h2, .u-h2 {
+	font-size: rem(42px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(52px);
+	}
+}
+
+h3, .u-h3 {
+	font-size: rem(26px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(32px);
+	}
+}
+
+h4, .u-h4 {
+	font-size: rem(22px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(28px);
+	}
+}
+
+h5, .u-h5 {
+	font-size: rem(18px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(24px);
+	}
+}
+
+h6, .u-h6 {
+	font-size: rem(14px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(18px);
+	}
+}
+
+/**
+* Paragraphs
+*/
+p {
+	margin-top: 0;
+	margin-bottom: $spacing-unit;
+	line-height: 1.8;
+}
+
+
+/**
+* Lists
+*/
+ul, ol, dl {
+	margin: $spacing-unit;
+	padding-left: $spacing-unit;
+	padding-right: $spacing-unit;
+
+	& & {
+		margin: 0;
+	}
+}
+
+/**
+* Horizontal Line
+*/
+
+hr {
+	border-width: 2px 0 0;
+	border-color: color('accent-5');
+	border-style: solid;
+	margin-top: double($spacing-unit);
+	margin-bottom: double($spacing-unit);
+	clear: both;
+}
+
+/**
+* Images
+*/
+img {
+	margin-top: halve($spacing-unit);
+	margin-bottom: halve($spacing-unit);
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+
+/**
+* Figure
+*/
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+/**
+* Address
+*/
+address {
+    font-style: normal;
+    line-height: 2;
+    font-size: 1.11rem;
+}
+
+/**
+* Blockquote
+*/
+blockquote {
+	border-left: 5px color('accent-1') solid;
+	font-size: inherit;
+	margin: $spacing-unit 0;
+	clear: both;
+	padding: halve($spacing-unit) $spacing-unit;
+
+	cite {
+		font-size: rem(14px);
+
+		&::before {
+			content: '-';
+		}
+	}
+}
+
+/**
+* Link Styles
+*/
+a {
+	color: color('accent-2');
+	transition: all .3s ease-in-out;
+	text-decoration: underline;
+
+	@include link-states() {
+		text-decoration: none;
+		color: color('accent-1');
+	}
+}

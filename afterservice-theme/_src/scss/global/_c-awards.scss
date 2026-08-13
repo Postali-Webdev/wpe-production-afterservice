@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #AWARDS
+\*------------------------------------*/
+
+.c-awards {
+    border-top: 1px solid color('accent-2');
+}
+
+.c-awards__img {
+    max-width: 20%;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 15%;
+        padding: $spacing-unit;
+    }
+}
+
+.c-awards__content {
+    @include media-breakpoint-up(sm) {
+        flex-wrap: nowrap;
+    }
+}

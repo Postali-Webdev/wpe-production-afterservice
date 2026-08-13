@@ -1,0 +1,183 @@
+.attorneys-block {
+    overflow: hidden;
+    h2 {
+        text-align: center;
+        color: $white;
+        text-align: center;
+        font-size: 68px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120px; /* 176.471% */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        &:after {
+            content: "";
+            width: 200px;
+            height: 3px;
+            background: $white;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 100px);
+        }
+    }
+    .c-info {
+        background: none;
+        background-color: $navy;
+        position: relative;
+        &:before {
+            content: "";
+            background: url("/wp-content/themes/afterservice-theme/_dist/img/img-woodgrain.png") no-repeat;
+            background-size: cover;
+            transform: rotate(180deg);
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            filter: brightness(0) saturate(100%) invert(11%) sepia(11%) saturate(5124%) hue-rotate(200deg) brightness(90%) contrast(93%);
+        }
+    }
+    .c-carousel__attorneys {
+        .slick-track {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            @media screen and (max-width: $phone) {
+                gap: 0;
+            }
+            .c-carousel__item {
+                height: unset;
+            }
+        }
+        .c-cases__item {
+            padding: 0;
+            .bio-img {
+                height: 400px;
+                width: 100%;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .service-tag {
+                    position: absolute;
+                    bottom:8px;
+                    left: 8px;
+                    background: $blue;
+                    box-sizing: border-box;
+                    padding: 8px;
+                    color: #FFF;
+                    font-family: "Refrigerator Deluxe Bold";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 125% */
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    p {
+                        color: $white;
+                        margin: 0;
+                    }
+                }
+            }
+            .bio-copy {
+                background: $white;
+                padding: 20px;
+                height: 125px;
+                box-sizing: border-box;
+                .c-page__title {
+                    font-family: "Refrigerator Deluxe Bold", sans-serif;
+                    font-size: 41px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 41px; /* 100% */
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin: 0;
+                    span {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .slick-arrow {
+            &.slick-next {
+                right: -50px !important;
+                @media screen and (max-width: $tab-land) {
+                    right: -30px !important;
+                }
+                @media screen and (max-width: $phone) {
+                    right: -25px !important;
+                }
+            }
+            &.slick-prev {
+                left: -50px !important;
+                @media screen and (max-width: $tab-land) {
+                    left: -30px !important;
+                }
+                @media screen and (max-width: $phone) {
+                    left: -25px !important;
+                }
+            }
+        }
+    }
+    .slick-dots {
+        bottom: -50px;
+        li {
+            button {
+                &:before {
+                    color: $white;
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $white;
+                    }
+                }   
+            }
+        }
+    }
+    .o-col--xxs-12.o-col--sm-10.o-col--offset-sm-1 {
+        @media screen and (max-width: $tab-land) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @media screen and (max-width: $phone) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    .lower-copy {
+        padding-top: 180px;
+        @media screen and (max-width: $tab-port) {
+            padding-top: 80px;
+        }
+        h2, h3, p {
+            color: $white !important;
+        }
+        h2 {
+            text-align: left;
+            font-family: "Refrigerator Deluxe Bold", sans-serif;
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120px; /* 100% */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 0;
+            @media screen and (max-width: $tab-port) {
+                font-size: 80px;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        h3 {
+            color: $ltblue !important;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+
+.c-form {
+	position: relative;
+	z-index: 10;
+}
+
+.c-forms__content {
+	box-shadow: 0 0 50px rgba(color('black'), .1);
+}
+
+.c-form__block {
+	padding: $spacing-unit;
+
+	@include media-breakpoint-up(sm) {
+		padding: double($spacing-unit);
+	}
+
+
+	& .wpcf7-form {
+		margin: 0 neg(10px);
+
+		@include media-breakpoint-up(sm) {
+			@include flexbox-block();
+		}
+
+		& p {
+			flex-basis: 25%;
+			padding: 0 10px;
+		}
+
+		& p:nth-of-type(5) {
+			flex-basis: 75%;
+			padding: 0 10px;
+
+			& label {
+				display: none;
+			}
+		}
+
+		& p:last-of-type {
+			display: flex;
+			flex-basis: 25%;
+		}
+
+		& .c-btn {
+			margin: 0;
+			flex-grow: 1;
+		}
+	}
+}
+
+.c-forms__title {
+	background-color: color('accent-1');
+	color: color('white');
+	padding: double($spacing-unit);
+
+	&::before,
+	&::after {
+		background-color: color('white') !important;
+	}
+}

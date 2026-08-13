@@ -1,0 +1,15 @@
+{
+  "name": "acf/attorneys",
+  "title": "Attorneys Block",
+  "description": "Attorneys slider",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["attorneys"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "attorneys.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

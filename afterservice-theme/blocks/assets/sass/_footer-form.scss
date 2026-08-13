@@ -1,0 +1,41 @@
+.footer-form {
+    position: relative;
+    .c-cta-secondary {
+        background-color: $salmon;
+        background-image: url('/wp-content/themes/afterservice-theme/_dist/img/img-flag.svg');
+        background-position: top left;
+        h2, p {
+            color: $white;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 100px */
+            letter-spacing: 2px;
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            @media screen and (max-width: $tab-port) {
+                font-size: 52px;
+                text-align: center;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 200px;
+                background: $white;
+            }
+        }
+    }
+    .c-background  {
+        z-index: 10;
+    }
+    .c-contact__cta {
+        padding: 50px 40px;
+    }
+}

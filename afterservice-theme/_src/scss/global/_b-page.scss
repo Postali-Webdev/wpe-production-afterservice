@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+/**
+ * Body
+*/
+
+body {
+	background-color: color('white');
+	color: color('accent-2');
+	font-family: $font-family-primary;
+	font-weight: font-weight('regular');
+	line-height: $base-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include media-breakpoint-up(sm) {
+		font-size: $base-font-size;
+	}
+}
+
+.c-page__title {
+	color: color('accent-3');
+    font-size: rem(72px);
+    letter-spacing: 1px;    
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+    	font-size: rem(150px);
+    	margin-bottom: triple($spacing-unit);
+    }
+
+	&:first-line {
+		color: color('accent-2');
+	}
+
+	& span {
+		color: color('accent-3');
+	}
+}

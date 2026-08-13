@@ -1,0 +1,41 @@
+.cta-block {
+    & > .c-cta-tertiary {
+        padding-top: 0;
+    }
+    .cta-wrapper {
+        background: $navy;
+        padding: 70px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: $tab-port) {
+            padding: 30px;
+        }
+        &:before {
+            content: "";
+            background: url("/wp-content/themes/afterservice-theme/_dist/img/img-woodgrain.png") no-repeat;
+            background-size: cover;
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            filter: brightness(0) saturate(100%) invert(11%) sepia(11%) saturate(5124%) hue-rotate(200deg) brightness(90%) contrast(93%);
+        }
+        h2, p, a {
+            position: relative;
+            z-index: 2;
+        }
+        h2 {
+            color: $ltblue;
+            margin-top: 0;
+            text-align: left;
+        }
+        p {
+            color: $white;
+        }
+        a.c-btn--secondary {
+            text-align: center;
+        }
+    }
+}

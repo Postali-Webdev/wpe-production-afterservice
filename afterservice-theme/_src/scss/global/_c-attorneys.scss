@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #ATTORNEYS
+\*------------------------------------*/
+
+.c-attorneys__info {
+    padding-top: $spacing-unit;
+}
+
+    .c-attorneys__title {
+
+        &::after {
+            content: '';
+            background: url('../img/img-bio-redline.jpg');
+            display: block;
+            width: 182px;
+            height: 1px;
+            margin: $spacing-unit 0;
+        }
+    }

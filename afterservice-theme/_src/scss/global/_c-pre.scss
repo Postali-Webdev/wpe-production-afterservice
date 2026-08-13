@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    #PRE FORMATED TEXT
+\*------------------------------------*/
+
+pre {
+	display: block;
+	padding: halve($spacing-unit);
+	margin: 0 0 halve($spacing-unit);
+	font-size: rem(13px);
+	line-height: $base-line-height;
+	color: color('black');
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: lighten(color('black'), 55%);
+	border: 1px solid lighten(color('black'), 45%);
+	border-radius: 4px;
+}

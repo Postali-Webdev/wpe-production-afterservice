@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #DETAILS
+\*------------------------------------*/
+
+.c-details__title {
+
+    &::after {
+        content: '';
+        background: url('../img/img-footer-line.jpg');
+        display: block;
+        width: 182px;
+        height: 1px;
+        margin: $spacing-unit auto;
+    }
+    
+}
+
+// .c-details__icon {
+//     width: 66px;
+// }

@@ -1,0 +1,237 @@
+/*
+Theme Name: afterservice
+Theme URI: https://www.matadorsolutions.net/
+Author: Matador Solutions
+Author URI: https://www.matadorsolutions.net/
+Description: Framework
+Version: 2.0.1
+Tags:
+*/
+
+/* ====================
+	Wysiwyg Styles Only
+==================== */
+
+.alignleft, img.alignleft {
+	margin-right: 15px;
+	display: inline;
+	float: left;
+	max-width: 40%;
+}
+
+.alignright, img.alignright {
+	margin-left: 15px;
+	display: inline;
+	float: right;
+	max-width: 40%;
+}
+
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	max-width: 50%;
+}
+
+.alignnone, img.alignnone {
+	display: block;
+	clear: both;
+	max-width: 50%;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding: 5px;
+	margin: 15px 0;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	max-width: 100% !important;
+}
+
+.wp-caption p.wp-caption-text {
+	line-height: 1.5;
+	font-size: 12px;
+	margin: 5px 0 0 0;
+}
+
+.wp-caption.alignleft{
+	margin: 10px 15px 10px 0;
+	display: inline;
+	float: left;
+	max-width: 40%;
+}
+
+.wp-caption.alignright{
+	margin: 10px 0 10px 15px;
+	display: inline;
+	float: right;
+	max-width: 40%;
+}
+
+.wp-caption.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	max-width: 50%;
+}
+
+.wp-caption.alignnone {
+	display: block;
+	clear: both;
+	max-width: 50%;
+}
+
+.entry-content img {
+	margin: 0 0 1.5em 0;
+}
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
+
+blockquote.left {
+	margin-right: 20px;
+	text-align: right;
+	margin-left: 0;
+	width: 33%;
+	float: left;
+}
+
+blockquote.right {
+	margin-left: 20px;
+	text-align: left;
+	margin-right: 0;
+	width: 33%;
+	float: right;
+}
+
+.gallery dl {
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.gallery dt {
+	border: 1px solid #ddd;
+}
+
+.gallery dd {
+
+}
+
+.gallery dl a {display: block;}
+
+.gallery dl img {
+	border: none !important;
+	margin: 0 !important;
+}
+
+.gallery-caption {
+	border: 1px solid #ddd;
+	border-top: none;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding: 5px;
+	line-height: 1.5;
+	font-size: 12px;
+}
+
+.featherlight .featherlight-content {
+	width: 50%;
+}
+
+.featherlight .featherlight-close-icon {
+	font-size: 32px;
+	color: #c9a466 !important;
+	top: 15px !important;
+	right: 10px !important;
+}
+
+.left .c-nav__dropdown {
+	right: 0;
+	left: auto;
+}
+
+.c-footer__resources__nav li:not(:last-child) a::after {
+	content: ' - ';
+}
+
+@media (min-width: 1224px) {
+    .c-info-secondary__blocks {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+.size-full      { max-width: 100% !important; }
+.size-large     { max-width: 90%  !important; }
+.size-medium    { max-width: 80%  !important; }
+.size-thumbnail { max-width: 70%  !important; }
+
+/* PPC Template */
+.page-template-page-ppc #menu-main-navigation {
+	display: none;
+}
+.page-template-page-ppc .ppc-footer {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+	box-sizing: border-box;
+}
+.page-template-page-ppc .ppc-footer a, .page-template-page-ppc .ppc-footer p {
+	color: #1B2141;
+}
+
+.page-template-page-ppc header .c-nav__icon {
+	pointer-events: none;
+    opacity: 0;
+}
+
+.page-template-page-ppc header .c-header__inner {
+	border-bottom: 1px solid #d7e2ec;
+}
+
+.page-template-page-ppc header .c-nav {
+	border-bottom: 0;
+}
+
+
+@media screen and (max-width: 820px) {
+	.page-template-page-ppc .ppc-footer { 
+		padding: 30px;
+	}
+}
+
+@media screen and (max-width: 601px) {
+	.page-template-page-ppc .ppc-footer {
+		flex-direction: column;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1599px) {
+	.page-template-page-ppc .c-header__phone { 
+		width: unset !important
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.page-template-page-ppc .c-header__phone { 
+		width: 100% !important
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}

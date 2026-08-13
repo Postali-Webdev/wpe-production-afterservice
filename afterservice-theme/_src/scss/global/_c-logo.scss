@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #LOGOS
+\*------------------------------------*/
+
+/**
+ * Logo
+*/
+
+.c-logo {
+	display: block;
+	max-width: 189px;
+	margin: 0;
+	align-self: center;
+
+	@include media-breakpoint-up(sm) {
+		max-width: 289px;
+		padding: 0 $spacing-unit;
+	}
+
+	@include media-breakpoint-down(xs) {
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.c-logo__nav {
+    display: block;
+    max-width: 250px;
+    margin: $spacing-unit auto;
+}

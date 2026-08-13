@@ -1,0 +1,66 @@
+/*------------------------------------*\
+	#LISTS
+\*------------------------------------*/
+
+.c-list--unstyled {
+	@include list-unstyled;
+}
+
+.c-list--inline {
+	@include list-inline;
+}
+
+.c-list--checkmark {
+	@include list-unstyled;
+
+	& li {
+		position: relative;
+		padding-left: 60px;
+		margin-bottom: $spacing-unit;
+		font-weight: font-weight('bold');
+
+		&::before {
+			content: '✓ ';
+			width: 40px;
+		    height: 40px;
+		    background-color: color('accent-1');
+		    border-radius: 50%;
+		    display: inline-block;
+		    text-align: center;
+		    color: #fff;
+		    padding-top: 5px;
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		}
+	}
+}
+
+.c-list--dots {
+	@include list-unstyled;
+
+	& li {
+		padding-left: $spacing-unit;
+		position: relative;
+
+		&::before {
+			content: '\2022';
+			font-size: rem(20px);
+			color: color('accent-1');
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+.c-list--columns {
+	@include media-breakpoint-up(md) {
+		@include flexbox-block();
+		column-gap: 2%;
+
+		& li {
+			flex-basis: 31.33%;
+		}
+	}
+}

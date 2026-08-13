@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #SOCIAL
+\*------------------------------------*/
+
+.c-social__list {
+	margin: 0;
+}
+
+	.c-social__item {
+		display: block;
+	}
+
+		.c-social__link {
+			display: block;
+			transition: all .5s ease-in-out;
+			color: color('black');
+			padding: 0 halve($spacing-unit);
+			font-size: rem(21px);
+			text-decoration: none;
+
+			@include media-breakpoint-up(sm) {
+				font-size: rem(32px);
+			}
+
+			@include link-states() {
+				color: color('accent-1');
+			}
+		}

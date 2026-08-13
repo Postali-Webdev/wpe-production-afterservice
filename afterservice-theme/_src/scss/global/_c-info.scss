@@ -1,0 +1,119 @@
+/*------------------------------------*\
+    #INFO
+\*------------------------------------*/
+
+.c-info {
+    background: url('../img/img-testimony-bg.jpg') bottom right no-repeat;
+}
+
+.c-info__content {
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 2vh;
+    }
+}
+
+.c-info__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.c-info__bg {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    display: block;
+
+    & img {
+    	margin: 0;
+    	position: relative;
+    	left: 50%;
+    	top: 50%;
+    	width: auto;
+    	height: auto;
+    	min-width: calc(100% + 2px);
+    	min-height: calc(100% + 2px);
+    	transform: translate(-50%,-50%);
+    	pointer-events: none;
+        object-fit: cover;
+    }
+}
+
+.c-info-cta__title {
+    background-color: color('accent-1');
+    padding: halve($spacing-unit) double($spacing-unit);
+    color: color('white');
+}
+
+.c-info-cta__content {
+    background-color: color('accent-5');
+    padding: double($spacing-unit);
+}
+
+.c-info__block {
+    position: relative;
+}
+
+.c-info__link {
+    display: block;
+}
+
+.c-info__image {
+    width: 100%;
+}
+
+.c-info__icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: halve($spacing-unit) $spacing-unit;
+    background-color: color('accent-1');
+    color: color('white');
+    font-size: rem(24px);
+
+    @include media-breakpoint-up(sm) {
+        padding: $spacing-unit double($spacing-unit);
+        font-size: rem(34px);
+    }
+}
+
+.c-info-secondary__title {
+    @include media-breakpoint-up(sm) {
+        font-size: rem(150px);
+    }
+}
+
+
+.c-info-secondary__blocks {
+    display: grid;
+    gap: rem(20px);
+
+    @include media-breakpoint-up(xs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.c-info-secondary__block {
+    padding: double($spacing-unit);
+    background-color: color('accent-5');
+}
+
+.c-info-secondary__icon {
+    width: 50px;
+    display: inline-block;
+}
+

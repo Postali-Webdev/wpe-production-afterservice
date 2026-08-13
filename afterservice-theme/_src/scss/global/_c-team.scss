@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    #TEAM
+\*------------------------------------*/
+
+.c-team__blocks {
+    display: grid;
+    gap: 1rem;
+
+    @include media-breakpoint-up(xs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.c-team__block {
+    position: relative;
+    background-color: color('black');
+
+
+     &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #000 100%);
+        z-index: 1;
+    }
+}
+
+.c-team__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: $spacing-unit;
+    color: color('white');
+    z-index: 10;
+}

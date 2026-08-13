@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# chmod 777 application/logs application/cache
+
+# escape code to bold and green, reset to black
+ echo '\n\033[1;32mInstalling Node Packages\033[0m'
+ echo '(This will take a minute)'
+
+# Install nope packages.
+sudo npm install --save-dev
+
+echo '\nDone'
+
+exit 0

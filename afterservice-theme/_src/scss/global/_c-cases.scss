@@ -1,0 +1,172 @@
+/*------------------------------------*\
+    #CASES
+\*------------------------------------*/
+
+.c-cases__title {
+    @include media-breakpoint-up(sm) {
+        font-size: rem(150px);
+    }
+}
+
+.c-cases__subtitle {
+    font-size: rem(36px);
+    margin-bottom: double($spacing-unit);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(56px);
+    }
+}
+
+.c-cases__text {
+    margin-bottom: $spacing-unit;
+}
+
+.c-cases__item {
+    text-align: center;
+    padding: double($spacing-unit);
+}
+
+.c-cases__revenue {
+    font-family: $font-family-secondary;
+    font-size: rem(62px);
+    margin: 0;
+    color: color('accent-1');
+    font-weight: font-weight('bold');
+    letter-spacing: 10px;
+    
+    @include media-breakpoint-up(sm) {
+        font-size: rem(80px);
+    }
+}
+
+.c-cases__description {
+    font-family: $font-family-secondary;
+    color: color('white');
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: rem(32px);
+    line-height: 1.2;
+    margin-top: $spacing-unit;
+}
+
+.c-cases__status {
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    color: color('white');
+    line-height: 1;
+    font-weight: font-weight('bold');
+    letter-spacing: 5px;
+    font-size: rem(32px);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(52px);
+    }
+}
+
+.c-cases__date {
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    color: color('accent-10');
+    font-weight: font-weight('bold');
+    letter-spacing: 5px;
+    font-size: rem(32px);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(52px);
+    }
+}
+
+.c-cases__msg {
+    margin-top: double($spacing-unit);
+    font-size: rem(18px);
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(28px);
+    }
+
+    & span {
+        display: block;
+        font-size: rem(28px);
+        line-height: 1;
+
+        @include media-breakpoint-up(sm) {
+            font-size: rem(48px);
+        }
+    }
+}
+
+.c-cases__phone {
+    font-size: rem(48px);
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(58px);
+    }
+    
+    @include link-states() {
+        color: color('accent-3');
+    }
+}
+
+.c-cases__list {
+    display: grid;
+    grid-gap: 2rem;
+
+    @include media-breakpoint-up(xxs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.c-cases-block__items {
+   display: grid;
+   grid-gap: rem(20px);
+
+    @include media-breakpoint-up(xs) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.c-cases-block__item {
+    border: 1px solid color('accent-3');
+    padding: $spacing-unit;
+}
+
+
+.c-cases-block__title {
+    font-size: rem(42px);
+    color: color('accent-2');
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem(62px);
+    }
+}
+
+.c-cases-block__description {
+    padding-top: $spacing-unit;
+    text-align: center;
+}
+
+.c-cases-block__type {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: font-weight('bold');
+    font-family: $font-family-secondary;
+}
+
+
+

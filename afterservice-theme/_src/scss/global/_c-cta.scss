@@ -1,0 +1,159 @@
+/*------------------------------------*\
+    #CTA
+\*------------------------------------*/
+
+.c-cta-primary {
+    background: url(../img/img-woodgrain-2.png) bottom right no-repeat;
+}
+
+.c-cta-primary__list {
+
+    & > li {
+
+        &:not(:last-child) {
+            margin-bottom: quarter($spacing-unit);
+            border-bottom: 1px solid color('accent-3');
+        }
+
+
+        >  a {
+            padding: $spacing-unit 0;
+            display: block;
+            text-decoration: none;
+            transition: all .5s ease;
+            font-family: $font-family-secondary;
+            text-transform: uppercase;
+            font-size: rem(28px);
+
+            @include link-states() {
+                color: color('accent-1');
+            }
+        }
+    }
+}
+
+.c-cta-primary__block {
+    padding: $spacing-unit;
+    
+    @include media-breakpoint-up(sm) {
+        padding: 8vw 6vw;
+    }
+}
+
+.c-cta-primary__content {
+    padding: $spacing-unit;
+    
+    @include media-breakpoint-up(sm) {
+        padding: 8vw 6vw;
+    }
+}
+
+.c-cta-primary__cta {
+    padding: 20vw 4vw 5vw;
+}
+
+.c-cta-secondary__content {
+    @include media-breakpoint-up(sm) {
+        padding: 0 $spacing-unit;
+    }
+}
+
+.c-cta-secondary {
+    background: url('../img/img-woodgrain.png') top right no-repeat;
+}
+
+.c-cta-tertiary {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 500px;
+        background-color: color('white');
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.c-cta-tertiary__title {
+
+    &::after {
+        content: '';
+        background: url('../img/img-test-redline.png');
+        display: block;
+        max-width: 393px;
+        height: 1px;
+        margin: $spacing-unit 0;
+    }
+}
+
+.c-cta-tertiary__block {
+    margin-bottom: 2vw;
+}
+
+.c-cta-tertiary__content {
+    padding: $spacing-unit;
+    
+    @include media-breakpoint-up(sm) {
+        padding: 6vw;
+    }
+}
+
+// .c-cta-tertiary__disclaimer {
+//     color: color('accent-2');
+//     font-size: rem(26px);
+//     line-height: 1.5;
+//     letter-spacing: 2px;
+//     display: block;
+//     padding: 4vw;
+//     position: relative;
+//     font-weight: font-weight('bold');
+
+//     @include media-breakpoint-up(sm) {
+//         font-size: rem(56px);
+//     }
+
+//     &::before,
+//     &::after {
+//         content: '';
+//         background: url('../img/img-line-blue.png');
+//         display: block;
+//         max-width: 532px;
+//         height: 1px;
+//         margin: $spacing-unit auto;
+//     }
+
+//     &::after {
+//         transform: rotate(-180deg);
+//     }
+// }
+
+
+
+.c-cta-tertiary__bg {
+    height: 80vh;
+    min-height: 1000px;
+}
+
+.c-cta-tertiary__content-primary {
+    padding: double($spacing-unit);
+    background-color: color('accent-1');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.c-cta-tertiary__content-secondary {
+    padding: double($spacing-unit);
+    background-color: color('accent-2');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: $font-family-primary-italic;
+}
+
+

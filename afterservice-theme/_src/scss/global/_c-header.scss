@@ -1,0 +1,82 @@
+/*------------------------------------*\
+	#HEADER
+\*------------------------------------*/
+
+.c-header {
+	.logged-in & {
+		top: 32px;
+	}
+
+	transition: all .5s ease;
+
+	&.active {
+		box-shadow: 0 0 10px transparentize(color('black'), 0.5);
+	}
+}
+
+	.c-header__phone {
+		display: block;
+		font-family: $font-family-secondary;
+		text-decoration: none;
+		background-color: color('accent-2');
+		color: color('white');
+		@include flexbox-block();
+		align-items: center;
+		padding: halve($spacing-unit);
+
+		@include media-breakpoint-up(sm) {
+			padding: third($spacing-unit) double($spacing-unit);
+		}
+
+		@include link-states() {
+			color: color('accent-7');
+		}
+
+		@include media-breakpoint-between(xxs, lg) {
+			width: 100%;
+			// order: -1;
+			justify-content: center;
+			text-align: center;
+		}
+
+		& .fas {
+			font-size: rem(24px);
+		}
+	}
+
+		.c-header__number {
+			font-size: rem(52px);
+			display: block;
+			line-height: 1;
+
+			@include media-breakpoint-up(md) {
+				font-size: rem(56px);
+			}
+		}
+
+		.c-header__icon {
+			margin: 0;
+			display: block;
+			width: 40px;
+
+			@include media-breakpoint-up(sm) {
+				margin-right: $spacing-unit;
+				width: 50px;
+			}
+		}
+
+		.c-header__msg {
+			font-family: $font-family-secondary;
+			text-transform: uppercase;
+			display: block;
+			letter-spacing: 2px;
+			font-size: rem(21px);
+		}
+
+		.c-header__call {
+			font-family: $font-family-secondary;
+			display: block;
+			letter-spacing: 2px;
+			font-size: rem(18px);
+		}
+

@@ -1,0 +1,49 @@
+//breakpoints
+$desktop-lg: 1400px;
+$desktop: 1200px;
+$tab-land: 1024px;
+$tab-port: 820px;
+$phone: 600px;
+
+//colors
+$navy: #1B2141;
+$salmon: #EC4A3D;
+$dksalmon: #C52A1D;
+$ltblue: #98CAD2;
+$blue: #366FA1;
+$white: #fff;
+$grey: #F1F4F4;
+
+//fonts
+@mixin eyebrow {
+    font-family: "Refrigerator Deluxe Bold", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25.6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin heavy-eyebrow {
+    text-align: center;
+    font-family: "Refrigerator Deluxe Bold", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--line-height-33_6, 33.6px); /* 105% */
+    text-transform: uppercase;
+}
+
+@mixin quote {
+    font-family: "Refrigerator Deluxe Bold", sans-serif;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41.6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @media screen and (max-width: $tab-land) {
+        font-size: 29px;
+    }
+}

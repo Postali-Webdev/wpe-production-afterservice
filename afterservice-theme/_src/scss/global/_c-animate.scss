@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    #ANIMATE
+\*------------------------------------*/
+
+.c-animate {
+	transform: translateY(100px);
+	opacity: 0;
+	transition: all .5s ease;
+	visibility: hidden;
+}
+
+.c-animate--view {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}

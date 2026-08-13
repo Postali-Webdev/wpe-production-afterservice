@@ -1,0 +1,30 @@
+.results-block {
+    .c-cases {
+        padding-bottom: 0;
+        @media screen and (max-width: $tab-port) {
+            h2 {
+                font-size: 54px;
+            }
+        }
+    }
+    .slick-dots {
+        @media screen and (max-width: $tab-port) {
+            right: calc(50% - 110px);
+        }
+        li {
+            button {
+                &:before {
+                    color: $white;
+                    
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $white;
+                    }
+                }   
+            }
+        }
+    }
+}

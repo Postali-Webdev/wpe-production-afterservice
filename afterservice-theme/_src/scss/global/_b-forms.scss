@@ -1,0 +1,235 @@
+/*------------------------------------*\
+	#FORMS
+\*------------------------------------*/
+
+.gform_fields,
+.gfield_checkbox,
+.gfield_radio {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+}
+
+.gfield {
+	margin-bottom: $spacing-unit;
+	overflow: hidden;
+}
+
+.gfield_label {
+	font-family: $font-family-secondary;
+	text-transform: uppercase;
+	color: color('white');
+	font-weight: normal;
+	display: none;
+}
+
+// Side by side input fields
+.ginput_complex {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.ginput_container span {
+    display: block;
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+// Address field make 3 columns
+.ginput_container span.address_city,
+.ginput_container span.address_state,
+.ginput_container span.address_zip {
+	width: 100%;
+
+	@include media-breakpoint-up(sm) {
+		width: 33.33%;
+	}
+}
+
+.clear-multi div {
+	width: 33.33%;
+	float: left;
+	padding-right: 15px;
+}
+
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: halve($spacing-unit) $spacing-unit;
+	font-size: rem(18px);
+	line-height: inherit;
+	color: color('black');
+	background-color: color('white');
+	background-image: none;
+	display: block;
+	border: 0;
+	border-radius: 0;
+	transition: border-color ease-in-out .15s;
+	outline: none;
+
+	&::placeholder,
+	.gf_placeholder::placeholder {
+		color: color('black');
+  		opacity: 1; /* Firefox */
+  		font-size: rem(18px);
+	}
+}
+
+select {
+	height: 42px;
+}
+
+textarea {
+	height: 100px;
+}
+
+input[type="submit"] {
+	width: auto;
+}
+
+input + label,
+select + label {
+	font-weight: normal;
+	margin-top: 10px;
+	display: inline-block;
+	font-size: rem(14px);
+}
+
+.ginput_container select[multiple="multiple"] {
+	max-height: 80px;
+	height: auto;
+}
+
+.gfield_checkbox li,
+.gfield_radio li {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.ginput_container input[type="checkbox"],
+.ginput_container input[type="radio"] {
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+	box-shadow: none;
+	height: 20px;
+	width: 20px;
+}
+
+.gfield_checkbox label,
+.gfield_radio label {
+	margin-top: 2px;
+	margin-bottom: 7px;
+}
+
+
+/**
+ * Form Validation
+ */
+
+.gform_validation_error .gfield_error {
+
+	.gfield_label {
+		color: #a94442;
+	}
+
+	input,
+	select,
+	textarea {
+		border-color: #a94442;
+		background-color: #f2dede;
+		color: #a94442;
+
+		&:focus {
+			border-color: #66afe9;
+			outline: 0;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+
+		}
+	}
+}
+
+.validation_error {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #ebccd1;
+	color: #a94442;
+	background-color: #f2dede;
+}
+
+.gform_wrapper .gfield_required,
+.gform_wrapper .validation_message {
+	color: #a94442;
+}
+
+
+#gforms_confirmation_message {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid #d6e9c6;
+	border-radius: 4px;
+	color: #3c763d;
+	background-color: #dff0d8;
+}
+
+/**
+ * Hide Honeypot
+ */
+
+.gform_validation_container {
+	display: none;
+	position: absolute;
+	left: -9000px;
+	visibility: hidden;
+}
+
+/**
+ * Form Date Picker
+ */
+
+#ui-datepicker-div {
+	background-color: #fff;
+	padding: 15px;
+	width: 295px;
+	display: none;
+}
+
+.ui-datepicker-calendar {
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+
+.ui-datepicker-calendar th {
+	text-align: center;
+}
+
+.ui-datepicker-calendar tr > th,
+.ui-datepicker-calendar tr > td {
+	padding: 5px;
+}
+
+.ui-corner-all {
+	cursor: pointer;
+}
+
+.ui-datepicker-next.ui-corner-all {
+	float: right;
+}
+
+.ui-datepicker-title {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.ui-datepicker-year,
+.ui-datepicker-month {
+	height: auto;
+	width: 50%;
+	display: inline-block;
+}

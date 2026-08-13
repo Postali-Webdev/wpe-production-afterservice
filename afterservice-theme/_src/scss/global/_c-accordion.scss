@@ -1,0 +1,56 @@
+/*------------------------------------*\
+	#ACCORDION
+\*------------------------------------*/
+
+.c-accordion__title {
+	background-color: color('white');
+	border: 0;
+	padding: $spacing-unit triple($spacing-unit);
+	margin-bottom: 0;
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+    text-align: left;
+    color: color('accent-3');
+    font-family: $font-family-secondary-bold;
+    text-transform: uppercase;
+    font-size: rem(28px);
+
+    @include media-breakpoint-up(sm) {
+    	font-size: rem(38px);
+    }
+
+    &.active {
+    	background-color: color('accent-5');
+    }
+}
+
+.c-accordion__panel {
+	margin-bottom: $spacing-unit;
+	border: 2px solid color('accent-9');
+}
+
+.c-accordion__content {
+	display: none;
+	padding: double($spacing-unit);
+	border-top-color: transparent;
+	background-color: color('white');
+}
+
+.c-accordion__title::before {
+	content: '▶ ';
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: color('accent-3');
+	font-size: rem(26px);
+
+	@include media-breakpoint-up(sm) {
+		top: 30px;
+	}
+}
+
+.c-accordion__title.active::before {
+	content: '▼ ';
+	color: color('accent-3');
+}

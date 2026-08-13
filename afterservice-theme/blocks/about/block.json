@@ -1,0 +1,15 @@
+{
+  "name": "acf/about",
+  "title": "About Block",
+  "description": "About",
+  "category": "postali-blocks",
+  "icon": "",
+  "keywords": ["about"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "about.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

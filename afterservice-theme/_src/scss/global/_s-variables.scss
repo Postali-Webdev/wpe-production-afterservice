@@ -1,0 +1,167 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/// Generic spacing unit
+$spacing-unit:      20px;
+
+/// Typography
+$font-family-primary: 'Crimson Text Regular', sans-serif;
+$font-family-primary-italic: 'Crimson Text Italic', sans-serif;
+$font-family-primary-semibold: 'Crimson Text SemiBold', sans-serif;
+$font-family-primary-semibold-italic: 'Crimson Text SemiBold Italic', sans-serif;
+$font-family-primary-bold: 'Crimson Text Bold', sans-serif;
+$font-family-primary-bold-italic: 'Crimson Text Bold Italic', sans-serif;
+$font-family-secondary-light: 'Refrigerator Deluxe Light', sans-serif;
+$font-family-secondary: 'Refrigerator Deluxe Regular', sans-serif;
+$font-family-secondary-bold: 'Refrigerator Deluxe Bold', sans-serif;
+$font-family-secondary-heavy: 'Refrigerator Deluxe Heavy', sans-serif;
+
+/// Global font size
+$base-font-size:    20px;
+
+/// Calculated line height
+$base-line-height:   1.5;
+
+///
+/// Global sass map for the color scheme palette.
+/// Add custom color in the color scheme palette separated by a comma.
+///
+$colors: (
+	'black':          #000,
+	'white':          #fff,
+	'accent-1':   		#ec4a3d,
+	'accent-2':       #1b2141,
+	'accent-3':   		#366fa1,
+	'accent-4':   		#a4a6b3,
+	'accent-5':   		#f1f4f4,
+	'accent-6':   		#afc5d9,
+	'accent-7':       #a6bfd3,
+	'accent-8':       #d7e2ec,
+	'accent-9':       #dbdbdb,
+	'accent-10':      #98cad2 
+);
+
+///
+/// Global sass map for the buttons color palette.
+/// Add custom color in the buttons color palette separated by a comma.
+///
+$buttons: (
+	'primary':    		map-get($colors, accent-2),
+	'secondary':  		map-get($colors, accent-1),
+	'tertiary':   		map-get($colors, accent-3),
+	'light':      		#fff,
+	'dark':       		#000
+);
+
+///
+/// Global sass map for the text transform property.
+///
+$text-transforms: (
+	'lowercase':     lowercase,
+	'uppercase':     uppercase,
+	'capitalize':    capitalize,
+	'normal':        none
+);
+
+///
+/// Global sass map for the font style property.
+///
+$font-styles: (
+	'normal':     normal,
+	'italic':     italic
+);
+
+
+///
+/// Global sass map for the font weight property.
+///
+$font-weights: (
+	'light':      300,
+	'regular':    400,
+	'semibold':   500,
+	'medium':     600,
+	'bold':  			700
+);
+
+///
+/// Global sass map for the float property.
+///
+$floats: (
+	'right':     right,
+	'left':      left,
+	'none':      none
+);
+
+///
+/// Global sass map for the paddings property.
+///
+$spacings: (
+	'xl':     120px,
+	'lg':     60px,
+	'md':     40px,
+	'sm':     20px,
+	'xs':     10px
+);
+
+///
+/// Global sass map for the text align property.
+///
+$text-aligns: (
+	'right':     right,
+	'left':      left,
+	'center':    center,
+	'justify':   justify
+);
+
+///
+/// Z-index Map for @function z();
+///
+$z-index: (
+	'element-name':   100
+);
+
+///
+/// Global sass map for margin/padding property;
+///
+$resets: (
+	'all',
+	'top',
+	'right',
+	'bottom',
+	'left'
+);
+
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  'xxs':     	 0,
+  'xs':      780px,
+  'sm':      1024px,
+  'md':     1224px,
+  'lg':     1400px,
+  'xl':     1600px
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 1024px,
+  md: 1224px,
+  lg: 1400px,
+  xl: 1600px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:               12 !default;
+$grid-gutter-width:          30px !default; // 30px

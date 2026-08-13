@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    #TEXT UTILITES
+\*------------------------------------*/
+
+
+/**
+* Generate text-transform classes for each text-transform in $text-transforms
+*/
+@each $text-transform, $value in $text-transforms {
+
+	.u-text--#{$text-transform} {
+		text-transform: $value;
+	}
+
+}
+
+/**
+* Generate font-style classes for each font-style in $font-styles
+*/
+@each $font-style, $value in $font-styles {
+
+	.u-text-style--#{$font-style} {
+		font-style: $value;
+	}
+
+}
+
+/**
+* Generate text-align classes for each text-align in $text-aligns
+*/
+@each $text-align, $value in $text-aligns {
+
+	.u-text--#{$text-align} {
+		text-align: $value;
+	}
+
+}
+
+/**
+* Generate color classes for each color in $colors
+*/
+@each $color, $value in $colors {
+
+	.u-text--#{$color} {
+		color: $value;
+	}
+
+}
+
+// Responsive Color
+//
+// Add color classes based on breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+
+	@include media-breakpoint-up($breakpoint) {
+		
+		@each $color, $value in $colors {
+
+			.u-text-#{$breakpoint}--#{$color} {
+				color: $value;
+			}
+
+		}
+	}
+}
+
+
+
+/**
+* Generate font-weight classes for each font-weight in $font-weights
+*/
+@each $font-weight, $value in $font-weights {
+
+	.u-text--#{$font-weight} {
+		font-weight: $value;
+	}
+
+}
+
+// Responsive Alignment
+//
+// Add align classes based on breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		.u-text-#{$breakpoint}--left { text-align: left; }
+		.u-text-#{$breakpoint}--right { text-align: right; }
+		.u-text-#{$breakpoint}--center { text-align: center; }
+	}
+}
+
+.u-text--block {
+	display: block;
+}
+
+.u-text--letter-spacing {
+	letter-spacing: 0.1em;
+}
+
+.u-text--md {
+	font-size: rem(26px);
+
+	@include media-breakpoint-up(sm) {
+        font-size: rem(36px);
+    }
+}
+
+.u-text--lg {
+	@include media-breakpoint-up(sm) {
+        font-size: rem(56px);
+    }
+}
+
+.u-text--xl {
+	@include media-breakpoint-up(sm) {
+        font-size: rem(86px);
+    }
+}
+
+.u-text--line {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+
+	&::before,
+	&::after {
+		content: '';
+		width: 50px;
+		height: 2px;
+		background-color: color('accent-1');
+
+		@include media-breakpoint-up(sm) {
+			width: 100px;
+		}
+	}
+
+	&::before {
+		margin-right: $spacing-unit;
+	}
+
+	&::after {
+		margin-left: $spacing-unit;
+	}
+}

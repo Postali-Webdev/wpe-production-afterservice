@@ -1,0 +1,34 @@
+/*------------------------------------*\
+	#WIDGETS
+\*------------------------------------*/
+
+.c-widgets {
+	padding: double($spacing-unit) 0;
+
+	ul {
+		@include list-unstyled;
+
+		& li {
+			border-bottom: 1px solid color('accent-6');
+
+			& a {
+				font-family: $font-family-secondary;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: rem(28px);
+				display: block;
+				padding: halve($spacing-unit) 0;
+			}
+		}
+	}
+}
+
+.c-widget__title {
+	font-family: $font-family-primary;
+	color: color('accent-6');
+    font-size: rem(20px);
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    padding-bottom: double($spacing-unit);
+    font-weight: font-weight('bold');
+}

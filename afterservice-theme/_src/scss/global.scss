@@ -1,0 +1,140 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Variables.............Globally-variables
+ *
+ * TOOLS
+ * Functions.............Useful mixins.
+ * Mixins................Useful mixins.
+ *
+ * GENERIC
+ * Normalize.............Reset browser styles.
+ * Border Box............Elements inner padding.
+ *
+ * BASE
+ * Page..................Page default styles.
+ * Type..................Typography default styles.
+ * Forms.................Forms default styles.
+ *
+ * OBJECTS
+ * Grid................Grid system.
+ * Content...............Inner content.
+ *
+ * COMPONENTS
+ * Buttons...............Button elements.
+ * Navigation............Main navigation.
+ * Offcanvas.............Offcanvas navigation.
+ * Header................Main page header.
+ * Hero..................Main page hero.
+ * Sidebar...............Main page sidebar.
+ * Logo..................Main page logo.
+ * Backgrounds...........Section's background.
+ * Lead..................Lead elements.
+ * Block.................Flexbox elements.
+ * List..................List elements.
+ * Pager.................Pager navigation.
+ * Pagination............Pagination navigation.
+ * Embed.................Responsive video.
+ * Breadcrumb............Breadcrumbs navigation.
+ * Tables................Tabular data.
+ * Pre...................Preformatted text.
+ * Carousel..............Carousel.
+ * Carousel..............Slick Carousel.
+ * Widget................Wp widgets.
+ * Tabs..................Tabs.
+ * Accordion.............Accordion.
+ * Social................Social Icons.
+ * Footer................Main page footer.
+ * Animate...............Main page animation.
+ * Lazyload..............Main page lazyload animation.
+ * Procedure List........Main page Procedure List.
+ *
+ * UTILITIES
+ * Images................Border, Rounded, Circle, Shadow
+ * Block.................Center, Background, Floats, Clearfix
+ * Text..................Colors, Transforms, Align, Weight
+ * Visibility............xs, sm, md, lg, xl screen sizes
+ * Reset.................Reset styles properties
+**/
+
+
+
+//Settings
+@import 'global/s-variables';
+
+
+//Tools
+@import 'global/t-functions';
+@import 'global/t-mixins';
+
+//Generic
+@import 'global/g-normalize';
+@import 'global/g-border-box';
+
+//Base
+@import 'global/b-page';
+@import 'global/b-type';
+@import 'global/b-forms';
+
+
+//Objects
+@import 'global/o-grid';
+@import 'global/o-content';
+
+
+//Components
+@import 'global/c-buttons';
+@import 'global/c-nav';
+@import 'global/c-offcanvas';
+@import 'global/c-header';
+@import 'global/c-hero';
+@import 'global/c-sidebar';
+@import 'global/c-logo';
+@import 'global/c-background';
+@import 'global/c-lead';
+@import 'global/c-block';
+@import 'global/c-list';
+@import 'global/c-pager';
+@import 'global/c-pagination';
+@import 'global/c-embed';
+@import 'global/c-breadcrumb';
+@import 'global/c-tables';
+@import 'global/c-pre';
+@import 'global/c-carousel';
+@import 'global/c-slick-carousel';
+@import 'global/c-widget';
+@import 'global/c-tabs';
+@import 'global/c-accordion';
+@import 'global/c-social';
+@import 'global/c-footer';
+@import 'global/c-animate';
+@import 'global/c-blazy';
+@import 'global/c-procedure-list';
+@import 'global/c-cases';
+@import 'global/c-practice';
+@import 'global/c-icons';
+@import 'global/c-social';
+@import 'global/c-services';
+@import 'global/c-attorneys';
+@import 'global/c-reviews';
+@import 'global/c-contact';
+@import 'global/c-cta';
+@import 'global/c-info';
+@import 'global/c-blog';
+@import 'global/c-awards';
+@import 'global/c-forms';
+@import 'global/c-video';
+@import 'global/c-map';
+@import 'global/c-team';
+@import 'global/c-details';
+@import 'global/c-about';
+@import 'global/c-testimonials';
+
+
+//Utilities
+@import 'global/u-img';
+@import 'global/u-block';
+@import 'global/u-text';
+@import 'global/u-visibility';
+@import 'global/u-reset';
